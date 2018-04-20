@@ -85,6 +85,10 @@
  * @see html.tpl.php
  */
 ?>
+
+<?php drupal_add_js('https://cdnjs.cloudflare.com/ajax/libs/x2js/1.2.0/xml2json.js', 'external'); ?>
+<?php drupal_add_js('themes/bartik/js/scripts.js'); ?>
+
 <div id="page-wrapper"><div id="page">
 
   <div id="header" class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>"><div class="section clearfix">
@@ -172,6 +176,8 @@
   <?php endif; ?>
 
   <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
+
+    <div id="container" style="width: 500px; height: 400px;"></div>
 
     <?php if ($breadcrumb): ?>
       <div id="breadcrumb"><?php print $breadcrumb; ?></div>
